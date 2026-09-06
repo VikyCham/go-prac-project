@@ -163,7 +163,7 @@ func WithTraceContext(logger zerolog.Logger, txn *newrelic.Transaction) zerolog.
 // NewPgxLogger creates a database logger
 func NewPgxLogger(level zerolog.Level) zerolog.Logger {
 	writer := zerolog.ConsoleWriter{
-		Out: os.Stdout,
+		Out:        os.Stdout,
 		TimeFormat: "2006-01-02 15:04:05",
 		FormatFieldValue: func(i any) string {
 			switch v := i.(type) {
