@@ -16,7 +16,7 @@ import (
 	"github.com/rs/zerolog"
 )
 
-// go:embed migrations/*.sql
+//go:embed migrations/*.sql
 var migrations embed.FS
 
 func Migrate(ctx context.Context, logger *zerolog.Logger, cfg *config.Config) error {
@@ -39,7 +39,7 @@ func Migrate(ctx context.Context, logger *zerolog.Logger, cfg *config.Config) er
 
 	defer conn.Close(ctx)
 
-	m, err := tern.NewMigration(ctx, conn, "schema_version")
+	m, err := tern.NewMigrator(ctx, conn, "schema_version")
 	if err != nil {
 		return fmt.Errorf("retrieving database migration subtree: %w", err)
 	}
@@ -63,6 +63,6 @@ func Migrate(ctx context.Context, logger *zerolog.Logger, cfg *config.Config) er
 	} else {
 		logger.Info().Msgf("migrated database schema, from %d to %d", from, len(m.Migrations))
 	}
-
+	
 	return nil
 }
