@@ -63,6 +63,6 @@ func Migrate(ctx context.Context, logger *zerolog.Logger, cfg *config.Config) er
 	} else {
 		logger.Info().Msgf("migrated database schema, from %d to %d", from, len(m.Migrations))
 	}
-	
+
 	return nil
 }

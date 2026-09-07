@@ -44,12 +44,12 @@ func (e *HTTPError) Is(target error) bool {
 
 func (e *HTTPError) WithMessage(message string) *HTTPError {
 	return &HTTPError{
-		Code: e.Code,
-		Message: message,
-		Status: e.Status,
+		Code:     e.Code,
+		Message:  message,
+		Status:   e.Status,
 		Override: e.Override,
-		Errors: e.Errors,
-		Action: e.Action,
+		Errors:   e.Errors,
+		Action:   e.Action,
 	}
 }
 

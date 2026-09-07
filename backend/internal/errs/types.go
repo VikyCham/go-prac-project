@@ -6,18 +6,18 @@ import (
 
 func NewUnauthorizedError(message string, override bool) *HTTPError {
 	return &HTTPError{
-		Code: MakeUpperCaseWithUnderscores(http.StatusText(http.StatusUnauthorized)),
-		Message: message,
-		Status: http.StatusUnauthorized,
+		Code:     MakeUpperCaseWithUnderscores(http.StatusText(http.StatusUnauthorized)),
+		Message:  message,
+		Status:   http.StatusUnauthorized,
 		Override: override,
 	}
 }
 
 func NewForbiddenError(message string, override bool) *HTTPError {
 	return &HTTPError{
-		Code: MakeUpperCaseWithUnderscores(http.StatusText(http.StatusForbidden)),
-		Message: message,
-		Status: http.StatusForbidden,
+		Code:     MakeUpperCaseWithUnderscores(http.StatusText(http.StatusForbidden)),
+		Message:  message,
+		Status:   http.StatusForbidden,
 		Override: override,
 	}
 }
@@ -30,12 +30,12 @@ func NewBadRequestError(message string, override bool, code *string, errors []Fi
 	}
 
 	return &HTTPError{
-		Code: formattedCode,
-		Message: message,
-		Status: http.StatusBadRequest,
+		Code:     formattedCode,
+		Message:  message,
+		Status:   http.StatusBadRequest,
 		Override: override,
-		Errors: errors,
-		Action: action,
+		Errors:   errors,
+		Action:   action,
 	}
 }
 
