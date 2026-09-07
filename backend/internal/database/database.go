@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/VikyCham/go-prac-proj/internal/config"
-	loggerConfig "github.com/VikyCham/go-prac-proj/internal/logger"
+	"github.com/VikyCham/go-boilerplate/internal/config"
+	loggerConfig "github.com/VikyCham/go-boilerplate/internal/logger"
 	pgxzero "github.com/jackc/pgx-zerolog"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"

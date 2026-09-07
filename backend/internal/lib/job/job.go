@@ -1,7 +1,7 @@
 package job
 
 import (
-	config "github.com/VikyCham/go-prac-proj/internal/config"
+	config "github.com/VikyCham/go-boilerplate/internal/config"
 	"github.com/hibiken/asynq"
 	"github.com/rs/zerolog"
 )

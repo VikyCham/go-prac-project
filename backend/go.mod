@@ -1,4 +1,4 @@
-module github.com/VikyCham/go-prac-proj
+module github.com/VikyCham/go-boilerplate
 
 go 1.26.4
 
@@ -13,7 +13,9 @@ require (
 	github.com/knadh/koanf/v2 v2.3.6
 	github.com/newrelic/go-agent/v3 v3.44.2
 	github.com/newrelic/go-agent/v3/integrations/nrpgx5 v1.3.4
+	github.com/newrelic/go-agent/v3/integrations/nrredis-v9 v1.1.2
 	github.com/pkg/errors v0.9.1
+	github.com/redis/go-redis/v9 v9.14.1
 	github.com/resend/resend-go/v2 v2.28.0
 	github.com/rs/zerolog v1.35.1
 )
@@ -40,7 +42,6 @@ require (
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/mitchellh/copystructure v1.2.0 // indirect
 	github.com/mitchellh/reflectwalk v1.0.2 // indirect
-	github.com/redis/go-redis/v9 v9.14.1 // indirect
 	github.com/robfig/cron/v3 v3.0.1 // indirect
 	github.com/shopspring/decimal v1.4.0 // indirect
 	github.com/spf13/cast v1.10.0 // indirect

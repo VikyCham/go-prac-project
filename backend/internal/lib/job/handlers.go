@@ -5,7 +5,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/VikyCham/go-prac-proj/internal/config"
+	"github.com/VikyCham/go-boilerplate/internal/config"
+	"github.com/VikyCham/go-boilerplate/internal/lib/email"
 	"github.com/hibiken/asynq"
 	"github.com/rs/zerolog"
 )
