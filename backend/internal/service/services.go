@@ -11,7 +11,7 @@ type Services struct {
 	Job  *job.JobService
 }
 
-func NewService(s *server.Server, repos *repository.Repositories) (*Services, error) {
+func NewServices(s *server.Server, repos *repository.Repositories) (*Services, error) {
 	authService := NewAuthService(s)
 
 	return &Services{
