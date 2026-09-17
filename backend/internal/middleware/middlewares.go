@@ -21,10 +21,10 @@ func NewMiddlewares(s *server.Server) *Middlewares {
 	}
 
 	return &Middlewares{
-		Global: NewGlobalMiddlewares(s),
-		Auth: NewAuthMiddleware(s),
+		Global:          NewGlobalMiddlewares(s),
+		Auth:            NewAuthMiddleware(s),
 		ContextEnhancer: NewContextEnchancer(s),
-		Tracing: NewTracingMiddleware(s, nrApp),
-		RateLimit: NewRateLimitMiddleware(s),
+		Tracing:         NewTracingMiddleware(s, nrApp),
+		RateLimit:       NewRateLimitMiddleware(s),
 	}
 }

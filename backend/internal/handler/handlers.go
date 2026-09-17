@@ -12,7 +12,7 @@ type Handlers struct {
 
 func NewHandlers(s *server.Server, services *service.Services) *Handlers {
 	return &Handlers{
-		Health: NewHealthHandler(s),
+		Health:  NewHealthHandler(s),
 		OpenAPI: NewOpenAPIHandler(s),
 	}
 }
